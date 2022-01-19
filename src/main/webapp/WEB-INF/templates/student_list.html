@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Список студентов</title>
+</head>
+<body>
+<h1>Это список студентов</h1>
+<table>
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>Имя</td>
+        <td>Средний балл</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="studnet : ${studends}">
+        <td th:text="${studnet.id}">1</td>
+        <td th:text="${studnet.name}">Иван</td>
+        <td th:text="${studnet.score}">95</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
